@@ -1,0 +1,41 @@
+use_bpm 112
+
+live_loop :one do
+  sample :bd_808, amp: 2
+  sleep 1
+end
+
+sleep 4
+
+live_loop :two do
+  sleep 2
+  sample :sn_dub, amp: 1.5
+  sleep 2
+end
+
+sleep 4
+
+
+# Bassline
+live_loop :bass do
+  play :d2, release: 1.5
+  sleep 1.5
+  play :d2, release: 1.5
+  sleep 1.5
+  play :a2
+  sleep 0.5
+  play :d3
+  sleep 0.5
+end
+
+# Kick drum
+live_loop :kick_drum do
+  sample :drum_tom_lo_soft, rate: 0.5
+  sleep 0.75
+  sample :drum_tom_lo_soft
+  sleep 0.75
+  sample :drum_tom_lo_soft
+  sleep 1
+  sample :drum_tom_lo_soft
+  sleep 1.5
+end
